@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Secret gate for a world-readable repo: block commit if gitleaks finds anything staged.
+set -e
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "pre-commit: gitleaks not found on PATH — refusing to commit (fail closed)." >&2
+  exit 1
+fi
+gitleaks protect --staged --no-banner --redact
