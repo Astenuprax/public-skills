@@ -9,8 +9,8 @@ description: >
   Trigger reactively on everyday phrasings, not just named idioms — "is this real",
   "does this hold up", "can I rely on this", "is this overstated", "is this legit",
   "fact-check this" — or whenever the user quotes a claim, stat, benchmark, headline,
-  research finding, vendor assertion, or a confident answer and treats it as
-  load-bearing rather than idly exploring. Fire on the steel-man idiom for Phase 1
+  research finding, or vendor assertion and treats it as load-bearing rather
+  than idly exploring. Fire on the steel-man idiom for Phase 1
   alone ("steel-man this", "strongest case for", "before I push back"). Offer it
   when the user is about to critique, share, or act on an article, a source, or a pitch.
 
