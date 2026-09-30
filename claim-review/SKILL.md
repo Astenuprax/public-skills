@@ -9,7 +9,7 @@ description: >
   Trigger reactively on everyday phrasings, not just named idioms — "is this real",
   "does this hold up", "can I rely on this", "is this overstated", "is this legit",
   "fact-check this" — or whenever the user quotes a claim, stat, benchmark, headline,
-  research finding, or vendor assertion and treats it as load-bearing rather
+  research finding, or vendor assertion, or a confident answer and treats it as load-bearing rather
   than idly exploring. Fire on the steel-man idiom for Phase 1
   alone ("steel-man this", "strongest case for", "before I push back"). Offer it
   when the user is about to critique, share, or act on an article, a source, or a pitch.
@@ -86,7 +86,9 @@ state plainly **where the strongest version is still weakest** — the objection
 answers least well, the evidence it most needs and lacks. A steel-man that hides
 its soft spots is advocacy, not hygiene; naming them is what makes the strong
 version trustworthy to rely on or to attack. Close with a one-word quality rating
-of the steel-manned position — **Strong / Moderate / Weak**.
+of the steel-manned position — **Strong / Moderate / Weak**. Where the claims and
+the argument built on them deserve different ratings, rate them separately: a
+chain of overscoped claims can still carry a sound argument, and vice versa.
 
 If the position is genuinely incoherent at its core (self-contradictory, not just
 poorly argued), flag it and decline to fabricate — a steel-man of an incoherent
@@ -100,8 +102,20 @@ if the user or the assistant finds the position unconvincing.
 The evidence-scrutiny phase — the counterpart to the steel-man: strengthen the
 claim, then test what its evidence actually carries.
 
+### Before Step 1 — pin the text you are grading
+Grade the sentence the author wrote, not your paraphrase of it. Before assigning
+any label, build a **hedge inventory** for the claim: modal words (probably,
+likely, might, perhaps), explicit flags (hypothetically, rumored, approximately,
+"might look like"), scare quotes, conditionals (if… then), and connectives — an
+**or** is two separable claims, an **and** is one conjunction; never grade a
+conjunction the author did not write. Give hedge credit **identically to every
+party**, whatever your relationship to them, and use the same endpoint charity for
+adjacent numerical claims by the same author. Then find the **load-bearing
+premise** — the sentence the conclusions inherit from — and give it its own row;
+reviews that grade only conclusions miss the premise that decides them.
+
 ### Step 1 — Route by claim type
-The routing is load-bearing; the two types need different evidence standards.
+The routing is load-bearing; the types need different evidence standards.
 
 - **Behavioural / empirical** (capabilities, benchmarks, observed outcomes, market
   facts, current events, documented behaviour): recency matters and is checkable.
@@ -112,6 +126,11 @@ The routing is load-bearing; the two types need different evidence standards.
   open, or smaller cases and the frontier is understudied. Accept older evidence,
   but force disclosure of **which exact case it was measured on** and whether it
   generalises or is extrapolated.
+- **Forecast / conditional / hypothetical** ("if… we would likely", "perhaps X",
+  "this might look like"): evidentiary labels (supported / contradicted) are a
+  category error here. Grade the premise the forecast rests on evidentially, and
+  give the forecast itself a **calibration** label — well-grounded / speculative /
+  contested — with the strongest published disagreement named.
 
 If the claim is a bare definition or a declared/stated fact (a published figure, a
 spec value, a documented constant), say so plainly: no *inferential* gap to
@@ -147,12 +166,27 @@ a mechanistic one. If you cannot verify the source in-session, mark the citation
 **unverified** and flag it as the weakest link. Never let citation trust ride on
 how rigorous the surrounding reasoning sounds.
 
-**Be honest that self-grading is a limit:** the same reasoning that might overstate
-a claim is assessing the gap, so treat this phase's own confidence with suspicion
-and lean on the verbatim scope quote and the source check rather than a self-rating.
-Revise the verdict freely when new evidence or a better argument arrives — that is
-the point of the review — but never move it merely to relieve someone's displeasure
-or because the claim was pushed back on. Disagreement is not evidence.
+Two attribution traps that recur: **self-attestations are self-reports in every
+direction** — a vendor's system card, capability tier, or benchmark table is never
+corroboration for one party and noise for another; tag it the same way whoever
+published it. And **verify who said it before building on it** — an organisation
+is not its executive, a reported framework is not the document under review, and a
+vivid quote that exists only in aggregators is a paraphrase until a first-tier or
+primary source carries it.
+
+**Self-grading is a limit, and sometimes a conflict.** The same reasoning that
+might overstate a claim is assessing the gap, so lean on the verbatim scope quote
+and the source check rather than a self-rating. When the reviewer has a stake in
+the verdict — the claim flatters or attacks its maker, its own model family, or a
+position its maker has taken — say so up front, write down **before research**
+what a biased reviewer would do and what would count as failing, and have a
+**different model** rate the finished verdict table too-soft / fair / too-harsh
+against the sources without seeing the reasoning. Report the result as one
+observation, not a reliability rate; the bias to expect runs both ways — soft on
+the congenial party, and reflexively harsh on the text to look independent.
+Revise the verdict freely when new evidence or a better argument arrives — that
+is the point of the review — but never move it merely to relieve someone's
+displeasure or because the claim was pushed back on. Disagreement is not evidence.
 
 ### Step 4 — Verdict, then flag + offer
 State where the claim lands — supported at its stated scope, overscoped (real
@@ -162,7 +196,8 @@ overscoped *and* citation unverified); don't force a single tidy label, and make
 the **gap statement** the deliverable, not the category. Commit to the verdict —
 don't state it and retract it in the same breath. A **clean** claim is a valid
 result: when nothing reaches past its evidence, say "nothing overscoped here" —
-never invent a gap to look thorough.
+never invent a gap to look thorough. A claim you did not research gets
+**unassessed**, not a label.
 
 Then **flag and offer — do not auto-run.** Name the problem, then offer the next
 step and wait for the green light: "I can pull and read the full source" / "I can reframe the
@@ -193,8 +228,9 @@ inferential gap, the citation-trust flag. For Phase 1: the steel-man and its
 quality rating. A few sentences; don't dump the machinery.
 
 **On request — full rubric.** Show the working: Phase 1's argument-type breakdown
-and quality assessment, Phase 2's routing decision, evidence-vs-inference split,
-causal-vs-correlational call, source-verification status, and verdict reasoning.
+and quality assessment, Phase 2's hedge inventory and routing decision,
+evidence-vs-inference split, causal-vs-correlational call, source-verification
+status, and verdict reasoning.
 Trigger on "show your working", "full breakdown", "walk me through it".
 
 Write plainly: direct, active voice, cause over symptom, no padding.
@@ -208,6 +244,9 @@ Write plainly: direct, active voice, cause over symptom, no padding.
 - For persuasive content — a pitch, an op-ed, a marketing claim, a news headline, a
   research abstract — note what the review reveals about where the real argument
   lives versus where the piece spends its energy.
+- A casual or hedged text (a social post, a talk transcript) is graded against
+  what it says, with its hedges; holding it to a standard no such text could meet
+  manufactures findings. The real failures survive that discipline.
 - The two phases are complementary and independently useful. Steel-man first when
   the user intends to challenge or rely on a position; gap-check first when they
   want to test an as-presented claim's evidence without idealising it. Offer both
